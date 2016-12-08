@@ -1,7 +1,7 @@
 # Summary
 
 * [前言](README.md)
-* [动画制作](动画制作.md)
+* [动画制作、时间延迟](动画制作.md)
 
 ## Introduction
 * [0526UI](0526UI.md)

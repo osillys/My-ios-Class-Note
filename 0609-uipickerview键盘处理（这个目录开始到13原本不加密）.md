@@ -127,7 +127,13 @@
     
     _birthdayField.text = dateStr;
 }
+```
 
+- 借由NSDateFormatter将UIDatePickView的NSDate属性改为NSString：
 
+```objc
+NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
 
+fmt.dateFormat = @"yyyy-MM-dd";
+NSString *dateStr = [fmt stringFromDate:datePicker.date];
 ```

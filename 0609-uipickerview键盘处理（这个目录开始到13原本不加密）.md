@@ -140,3 +140,42 @@ NSString *dateStr = [fmt stringFromDate:datePicker.date];
 
 ## UIPickerView 二级联动滚动常见bug
 - 应在一级component didSelect时再去更新二级component
+
+## Xcode项目中的常见选项和文件
+学习内容：
+- info.plist文件
+- 更改app显示名称
+- 更改app版本号
+- .pch 预编译档案的作用
+```objc
+/* pch里面的所有内容都是共享，每个文件都会共有:
+ 作用:
+ 1.存放一些公用的宏
+ 2.存放一些公用的头文件
+ 3.自定义Log，用于开发阶段debug用
+ 
+ 缺点：项目庞大时会降低编译速度，使用@class代替import也可加快编译速度
+ */
+
+// 设定pch给工程文件： buildSetting -> prefix ->
+
+//只针对objc语法的文件编译
+#ifdef __OBJC__
+
+#import "UIImage+Image.h"
+
+// 宏里面可变参数：...
+// 函数中可变参数: __VA_ARGS__
+
+// 只在项目在调试阶段，下面的宏才起作用
+#ifdef DEBUG
+#define XMGLog(...)  NSLog(__VA_ARGS__)
+
+#else // 发布阶段
+
+#define XMGLog(...)
+
+#endif
+
+#endif
+```

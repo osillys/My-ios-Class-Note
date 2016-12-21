@@ -147,6 +147,7 @@ NSString *dateStr = [fmt stringFromDate:datePicker.date];
 - 更改app显示名称
 - 更改app版本号
 - .pch 预编译档案的作用
+
 ```objc
 /* pch里面的所有内容都是共享，每个文件都会共有:
  作用:
@@ -154,7 +155,7 @@ NSString *dateStr = [fmt stringFromDate:datePicker.date];
  2.存放一些公用的头文件
  3.自定义Log，用于开发阶段debug用
  
- 缺点：项目庞大时会降低编译速度，使用@class代替import也可加快编译速度
+ 缺点：项目庞大时会降低编译速度，使用@class代替import也可加快编译速度，xcode6开始apple不建议再使用.pch
  */
 
 // 设定pch给工程文件： buildSetting -> prefix ->

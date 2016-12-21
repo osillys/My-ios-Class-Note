@@ -137,3 +137,6 @@ NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
 fmt.dateFormat = @"yyyy-MM-dd";
 NSString *dateStr = [fmt stringFromDate:datePicker.date];
 ```
+
+## UIPickerView 二级联动滚动常见bug
+- 应在一级component didSelect时再去更新二级component
